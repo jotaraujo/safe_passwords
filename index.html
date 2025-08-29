@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <script src="src/script.js" defer></script>
   <title>safe Passwords</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
     <form>
       <div class="form-control">
         <label for="password_length">Tamanho da senha:</label>
-        <input type="number" name="password_length" id="password_length" min="4" max="20" required>
+        <input type="number" name="password_length" id="password_length" min="4" max="20">
       </div>
       <div class="form-control checklist">
         <label for="uppercase"><input type="checkbox" name="uppercase" id="uppercase">Incluir letras maiúsculas</label>
@@ -23,7 +23,7 @@
       </div>
       <button id="generate">Gerar Senha</button>
     </form>
+    <div id="password"></div>
   </div>
-  <div id="password"></div>
 </body>
 </html>
