@@ -21,10 +21,26 @@ const symbols = () => {
 }
 
 // Criar função para gerar a senha
-// const generatePassword = () => {
-//   const password = []
+const generatePassword = (upperCase, lowerCase, numbers, symbols) => {
+  let password = ""
 
-// }
+  const generators = [
+    upperCase,
+    lowerCase,
+    numbers,
+    symbols
+  ]
+
+  for (let i = 0; i < generators.length; i = i + 4) {
+    generators.forEach(() => {
+      const randomValue = generators[Math.floor(Math.random() * generators.length)]
+      password += generators[randomValue]
+    })
+
+
+    console.log(password)
+  }
+}
 //Verificar o tamanho da senha inserida pelo usuário
 //Verificar se deve incluir letras maiúsculas na senha
 //Se sim, chamar a função de letras maiúsculas
@@ -54,5 +70,5 @@ const createPassword = (uppercase, lowercase, number, symbol) => {
 generateButton.addEventListener('click', (e) => {
   e.preventDefault()
 
-  createPassword(upperCase(), lowerCase(), numbers(), symbols())
+  generatePassword(upperCase(), lowerCase(), numbers(), symbols())
 })
