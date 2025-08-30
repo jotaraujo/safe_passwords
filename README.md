@@ -29,8 +29,6 @@ Este projeto foi desenvolvido como uma forma prática de aprimorar habilidades e
 - **Seleção de Caracteres:** Escolha incluir letras maiúsculas, minúsculas, números e símbolos.
 - **Geração Instantânea:** Crie uma nova senha com um único clique.
 - **Copiar para a Área de Transferência:** Botão "Copiar" que copia a senha gerada e fornece feedback visual ao usuário.
-- **Interface Responsiva:** Funciona bem em desktops e dispositivos móveis.
-- **Feedback ao Usuário:** Mensagens claras informam quando a senha foi gerada e copiada.
 
 ---
 
@@ -81,12 +79,6 @@ A utilização da ferramenta é muito simples:
 3.  Clique no botão **"Gerar senha!"**.
 4.  A nova senha segura aparecerá na seção abaixo.
 5.  Clique em **"Copiar senha"** para salvá-la na sua área de transferência. O botão mudará de texto para "Senha copiada!" para confirmar a ação.
-
----
-
-## 📄 Licença
-
-Distribuído sob a Licença MIT. Veja o arquivo `LICENSE` para mais informações.
 
 ---
 
