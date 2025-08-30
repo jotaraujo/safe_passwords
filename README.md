@@ -37,7 +37,7 @@ Este projeto foi desenvolvido como uma forma prática de aprimorar habilidades e
 O projeto foi construído utilizando as seguintes tecnologias:
 
 - **HTML5:** Para a estrutura semântica do conteúdo.
-- **CSS3:** Para a estilização, layout e design responsivo.
+- **CSS3:** Para a estilização e layout.
 - **JavaScript (ES6+):** Para toda a lógica funcional, manipulação de eventos e do DOM.
 
 ---
