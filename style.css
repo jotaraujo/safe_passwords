@@ -78,9 +78,46 @@ form-control.checklist {
   font-size: 1.25rem;
   padding: .5rem 1.25rem;
   margin-top: 1.5rem;
-  transition: background-color .3s ease-in;
+  opacity: .8;
+  transition: opacity .3s ease-in;
 }
 
 #generate:hover {
-  background-color: #62446d;
+  opacity: 1;
+}
+
+#password-section {
+  border: 2px solid #7f518f;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+  display: none;
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+}
+
+.success {
+  color: #2ff04f;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.password {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.copy {
+  background-color: #7f518f;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  opacity: .8;
+  padding: .5rem 1.25rem;
+  transition: opacity .3s ease-in;
+}
+
+.copy:hover {
+  opacity: 1;
 }

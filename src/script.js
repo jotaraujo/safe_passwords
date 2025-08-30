@@ -1,6 +1,6 @@
 // Selecionar os elementos no DOM
 const generateButton = document.querySelector('#generate')
-const passwordSection = document.querySelector('#password')
+const passwordSection = document.querySelector('#password-section')
 
 //Criar a função de letras maiúsculas
 const upperCase = () => {
@@ -55,11 +55,21 @@ const generatePassword = (upperCase, lowerCase, numbers, symbols) => {
 
 
 //Criar função para gerar os elementos da div password
-const createPassword = (password) => {
-  const title = document.createElement('h2')
-  title.innerText = password
+const createPassword = (data) => {
+  const password = document.createElement('h2')
+  password.classList.add('password')
+  password.innerText = data
 
-  passwordSection.append(title)
+  const successMsg = document.createElement('p')
+  successMsg.classList.add('success')
+  successMsg.innerText = 'Password generated successfully!'
+
+  const copyButton = document.createElement('button')
+  copyButton.classList.add('copy')
+  copyButton.innerText = 'Copy password'
+
+  passwordSection.style.display = 'block'
+  passwordSection.append(successMsg, password, copyButton)
 }
 //Selecionar a div password
 //Criar um h1 para a senha gerada chamando a função gerarSenha
