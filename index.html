@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <script src="src/script.js" defer></script>
   <title>safe Passwords</title>
 </head>
 <body>
@@ -12,18 +12,18 @@
     <h1>Safe Passwords</h1>
     <form>
       <div class="form-control">
-        <label for="password_length">Tamanho da senha:</label>
-        <input type="number" name="password_length" id="password_length" min="4" max="20" required>
+        <label for="password_length">Password length:</label>
+        <input type="number" name="password_length" id="password_length" required>
       </div>
       <div class="form-control checklist">
-        <label for="uppercase"><input type="checkbox" name="uppercase" id="uppercase">Incluir letras maiúsculas</label>
-        <label for="lowercase"><input type="checkbox" name="lowercase" id="lowercase">Incluir letras minúsculas</label>
-        <label for="numbers"><input type="checkbox" name="numbers" id="numbers">Incluir números</label>
-        <label for="symbols"><input type="checkbox" name="symbols" id="symbols">Incluir símbolos</label>
+        <label for="uppercase"><input type="checkbox" name="uppercase" id="uppercase">Inclued uppercase letters</label>
+        <label for="lowercase"><input type="checkbox" name="lowercase" id="lowercase">Inclued lowercase letters</label>
+        <label for="numbers"><input type="checkbox" name="numbers" id="numbers">Inclued number</label>
+        <label for="symbols"><input type="checkbox" name="symbols" id="symbols">Inclued Symbols</label>
       </div>
-      <button id="generate">Gerar Senha</button>
+      <button id="generate">Generate password</button>
     </form>
+    <div id="password-section"></div>
   </div>
-  <div id="password"></div>
 </body>
 </html>
