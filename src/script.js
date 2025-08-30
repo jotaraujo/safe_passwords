@@ -16,13 +16,15 @@ const numbers = () => {
 }
 //Criar a função de caracteres especiais
 const symbols = () => {
-  const symbols = '!@#$%^&*()_-+=[]{}/,.<>'
+  const symbols = '!@#$%^&*()_-+=[]{}/.<>'
   return symbols[Math.floor(Math.random() * symbols.length)]
 }
 
 // Criar função para gerar a senha
 const generatePassword = (upperCase, lowerCase, numbers, symbols) => {
   let password = ""
+
+  const passwordLength = document.querySelector('#password_length').value
 
   const generators = [
     upperCase,
@@ -31,15 +33,14 @@ const generatePassword = (upperCase, lowerCase, numbers, symbols) => {
     symbols
   ]
 
-  for (let i = 0; i < generators.length; i = i + 4) {
+  for (let i = 0; i < passwordLength; i += 4) {
     generators.forEach(() => {
-      const randomValue = generators[Math.floor(Math.random() * generators.length)]
-      password += generators[randomValue]
+      const randomValue = generators[Math.floor(Math.random() * generators.length)]()
+      password += randomValue
     })
-
-
-    console.log(password)
   }
+  password = password.slice(0, passwordLength)
+  createPassword(password)
 }
 //Verificar o tamanho da senha inserida pelo usuário
 //Verificar se deve incluir letras maiúsculas na senha
@@ -54,8 +55,7 @@ const generatePassword = (upperCase, lowerCase, numbers, symbols) => {
 
 
 //Criar função para gerar os elementos da div password
-const createPassword = (uppercase, lowercase, number, symbol) => {
-  const password = [uppercase, lowercase, number, symbol]
+const createPassword = (password) => {
   const title = document.createElement('h2')
   title.innerText = password
 
@@ -70,5 +70,5 @@ const createPassword = (uppercase, lowercase, number, symbol) => {
 generateButton.addEventListener('click', (e) => {
   e.preventDefault()
 
-  generatePassword(upperCase(), lowerCase(), numbers(), symbols())
+  generatePassword(upperCase, lowerCase, numbers, symbols)
 })
