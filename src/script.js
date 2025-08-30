@@ -27,24 +27,24 @@ const generatePassword = (upperCase, lowerCase, numbers, symbols) => {
 
   const passwordLength = document.querySelector('#password_length').value
 
-  const generators = [
-    upperCase,
-    lowerCase,
-    numbers,
-    symbols
-  ]
+  const generators = []
 
-  for (let i = 0; i < passwordLength; i += 4) {
-    generators.forEach(() => {
-      const randomValue = generators[Math.floor(Math.random() * generators.length)]()
-      password += randomValue
-    })
+  if (uppercaseInput.checked) generators.push(upperCase)
+  if (lowercaseInput.checked) generators.push(lowerCase)
+  if (numbersInput.checked) generators.push(numbers)
+  if (symbolsInput.checked) generators.push(symbols)
+
+  if (generators.length === 0) return
+
+  for (let i = 0; i < passwordLength; i++) {
+    const randomValue = generators[Math.floor(Math.random() * generators.length)]()
+    password += randomValue
   }
-  password = password.slice(0, passwordLength)
   createPassword(password)
 }
 
 const createPassword = (data) => {
+  passwordSection.innerHTML = ''
   const password = document.createElement('h2')
   password.classList.add('password')
   password.innerText = data
