@@ -25,7 +25,7 @@ Este projeto foi desenvolvido como uma forma prática de aprimorar habilidades e
 
 ## ✨ Funcionalidades
 
-- **Comprimento Personalizável:** Defina o tamanho da senha, de 4 a 20 caracteres.
+- **Comprimento Personalizável:** Defina o tamanho da senha.
 - **Seleção de Caracteres:** Escolha incluir letras maiúsculas, minúsculas, números e símbolos.
 - **Geração Instantânea:** Crie uma nova senha com um único clique.
 - **Copiar para a Área de Transferência:** Botão "Copiar" que copia a senha gerada e fornece feedback visual ao usuário.
